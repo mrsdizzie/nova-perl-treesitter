@@ -1,0 +1,14 @@
+{
+  "name": "Perl Tree-Sitter",
+  "organization": "Isla W",
+  "identifier": "com.mrsdizzie.perl",
+  "version": "0.0.1",
+  "description": "Syntax highlighting for Perl files using Tree-Sitter",
+  "license": "MIT",
+  "categories": ["languages"],
+
+  "repository": "https://github.com/mrsdizzie/nova-perl-treesitter",
+  "bugs": "https://github.com/mrsdizzie/nova-perl-treesitter/issues",
+
+  "min_runtime": "10.0"
+}

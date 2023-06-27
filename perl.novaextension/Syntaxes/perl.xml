@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syntax name="perl+treesitter">
+	<meta>
+		<name>Perl (Tree-Sitter)</name>
+		<type>script</type>
+		<preferred-file-extension>pl</preferred-file-extension>
+		<scriptable shebang="#!/usr/bin/env perl" />
+	</meta>
+
+	<detectors>
+		<extension priority="1.0">pl,pm,t,pod,cgi</extension>
+		<match-content lines="2" priority="1.0">\#\s*\-\*\-\s*mode:\s*perl</match-content>
+		<match-content lines="5" priority="1.0">^#\s*vi:\s*(syntax|ft)=(perl)\b</match-content>
+		<match-content lines="2" priority="0.7">\#\!.*?\bperl</match-content>
+	</detectors>
+
+	<comments>
+		<multiline>
+			<starts-with>
+				<expression>=pod</expression>
+			</starts-with>
+			<ends-with>
+				<expression>=cut</expression>
+			</ends-with>
+		</multiline>
+		<single>
+			<expression>#</expression>
+		</single>
+	</comments>
+
+	<indentation>
+		<increase>
+			<expression>(\{[^}\"']*$)|(\[[^\]\"']*$)|(\([^)\"']*$)</expression>
+		</increase>
+		<decrease>
+			<expression>^\s*(\s*/\*.*\*/\s*)*[\}\]\)\\]</expression>
+		</decrease>
+	</indentation>
+
+	<tree-sitter language="perl">
+		<highlights />
+		<injections />
+	</tree-sitter>
+</syntax>
