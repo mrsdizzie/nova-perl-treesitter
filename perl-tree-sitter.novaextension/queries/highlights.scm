@@ -22,7 +22,8 @@
 ] @keyword.operator
 
 ; technically an operator but used more like a builtin function
-[ "qw"] @identifier.core
+[ "qw" ] @identifier.core
+[ "eval" ] @identifier.core
 
 (comment) @comment
 

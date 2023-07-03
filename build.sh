@@ -14,6 +14,6 @@ npx tree-sitter generate
 ../compile_parser.sh "$PWD" "/Applications/Nova.app"
 
 codesign -s - libtree-sitter-perl.dylib
-mv libtree-sitter-perl.dylib ../../perl.novaextension/Syntaxes/
+mv libtree-sitter-perl.dylib ../../perl-tree-sitter.novaextension/Syntaxes/
 
 cd "$OLDPWD"
