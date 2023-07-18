@@ -11,7 +11,8 @@
 		<extension priority="1.0">pl,pm,t,pod,cgi</extension>
 		<match-content lines="2" priority="1.0">\#\s*\-\*\-\s*mode:\s*perl</match-content>
 		<match-content lines="5" priority="1.0">^#\s*vi:\s*(syntax|ft)=(perl)\b</match-content>
-		<match-content lines="2" priority="0.7">\#\!.*?\bperl</match-content>
+		<match-content lines="2" priority="1.0">\#\!.*?\bperl</match-content>
+		<match-content lines="2" priority="1.0">^package.+;$</match-content>
 	</detectors>
 
 	<comments>
@@ -39,6 +40,7 @@
 
 	<tree-sitter language="perl">
 		<highlights />
+		<folds />
 		<injections />
 	</tree-sitter>
 </syntax>
