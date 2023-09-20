@@ -16,14 +16,6 @@
 	</detectors>
 
 	<comments>
-		<multiline>
-			<starts-with>
-				<expression>=pod</expression>
-			</starts-with>
-			<ends-with>
-				<expression>=cut</expression>
-			</ends-with>
-		</multiline>
 		<single>
 			<expression>#</expression>
 		</single>
@@ -42,5 +34,6 @@
 		<highlights />
 		<folds />
 		<injections />
+		<symbols />
 	</tree-sitter>
 </syntax>

@@ -1,3 +1,9 @@
+## 0.0.5
+
+Many upstream improvements and fixes
+
+Add symbols and folds to nova extension
+
 ## 0.0.4
 
 Upstream: Add support for map and grep statements
