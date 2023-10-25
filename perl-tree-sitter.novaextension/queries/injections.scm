@@ -1,5 +1,6 @@
-[  
- (quoted_regexp modifiers: _? @character.special)
- (match_regexp  modifiers: _? @character.special)
+[
+ (quoted_regexp)
+ (match_regexp)
+ (regexp_content)
  (#set! injection.language regex)
 ] @injection.content

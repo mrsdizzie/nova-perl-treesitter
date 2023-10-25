@@ -1,3 +1,7 @@
+## 1.0
+
+More upstream improvements. Upstream tree-sitter grammar has also  now been included as the official perl tree-sitter for Neovim which means more review and testing.
+
 ## 0.0.5
 
 Many upstream improvements and fixes

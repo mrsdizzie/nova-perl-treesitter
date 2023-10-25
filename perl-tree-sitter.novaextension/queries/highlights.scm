@@ -54,10 +54,12 @@
 
 
 [
-  (string_literal) 
+  (string_literal)
   (interpolated_string_literal)
-  (command_string) 
+  (command_string)
   (heredoc_content)
+  (replacement)
+  (transliteration_content)
 ] @string
 
 [
@@ -69,20 +71,21 @@
 
 [(escape_sequence) (escaped_delimiter)] @string-template.value
 
-[  
- (quoted_regexp modifiers: _? @character.special)
- (match_regexp  modifiers: _? @character.special)
+[
+ (quoted_regexp)
+ (match_regexp)
+ (regexp_content)
 ] @regex
 
-(autoquoted_bareword _?) @string-template.value
+(autoquoted_bareword) @string-template.value
 
 (use_statement (package) @type)
 (package_statement (package) @type)
 (require_expression (bareword) @type)
 ((package) (quoted_word_list) @string-template.value)
 
-
-(subroutine_declaration_statement name: (_) @identifier.function)
+(subroutine_declaration_statement name: (bareword) @identifier.function)
+(refgen_expression) @identifier.function
 (attribute_name) @decorator
 (attribute_value) @string
 
@@ -114,16 +117,16 @@
   (varname)
   "}" @punctuation.special
 )
-(varname 
+(varname
   (block
-    "{" @punctuation.special 
-    "}" @punctuation.special 
+    "{" @punctuation.special
+    "}" @punctuation.special
   )
 )
 
 (
-  [(varname) (filehandle)] @variable.builtin
-  (#match? @variable.builtin "^((ENV|ARGV|INC|ARGVOUT|SIG|STDIN|STDOUT|STDERR)|[_ab]|\\W|\\d+|\\^.*)$")
+  [(varname) (filehandle)] @identifier.core
+  (#match? @identifier.core "^((ENV|ARGV|INC|ARGVOUT|SIG|STDIN|STDOUT|STDERR)|[_ab]|\\W|\\d+|\\^.*)$")
 )
 
 (quoted_word_list) @string-template.value
@@ -140,6 +143,11 @@
 (array_element_expression array:(_) @identifier.variable)
 (slice_expression array:(_) @identifier.variable)
 (keyval_expression array:(_) @identifier.variable)
+; This is so braces inside a hash reference are not seen as brackets and given random alternating colors by Nova
+; It should probably be punctuation.special but Nova themes don't really support that
+(hash_element_expression (_) ["{" "}"] @identifier.variable)
+
+
 
 (hash_element_expression hash:(_) @identifier.variable)
 (slice_expression hash:(_) @identifier.variable)
