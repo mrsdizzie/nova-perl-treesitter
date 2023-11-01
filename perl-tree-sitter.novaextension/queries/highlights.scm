@@ -16,13 +16,13 @@
 "sub" @keyword.construct
 
 ; technically an operator but used more like a builtin function
-[ "qw" "eval" "map" "grep" ] @identifier.core
+[ "qw" "eval" "map" "grep" "sort" ] @identifier.core
 
 "package" @definition.package
 
 [
   "do"
-  "my" "our" "local"
+  "my" "our" "local" "state"
   "last" "next" "redo" "goto"
   "undef"
 ] @keyword
