@@ -1,3 +1,10 @@
+## 1.0.2
+
+Upstream bug fixes
+Properly detect entire package file as a class symbol
+
+Add some basic completions
+
 ## 1.0.1
 
 Upstream bug fixes

@@ -3,9 +3,11 @@
  (#set! role function)
 ) @subtree
 
-(package_statement
-  name: (package) @name
- (#set! role class)
+(source_file
+  (package_statement
+    name: (package) @name
+  )
+  (#set! role class)
 ) @subtree
 
 (variable_declaration

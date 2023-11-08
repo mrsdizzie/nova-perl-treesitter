@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<completions>
+    <provider>
+    <syntax>perl+treesitter</syntax>
+        <exclude-selector>string, comment</exclude-selector>
+        <symbols type="function">
+            <behavior>
+                <arguments prefix="(" suffix=")" separator=", " />
+            </behavior>
+        </symbols>
+    </provider>
+    <provider>
+    <syntax>perl+treesitter</syntax>
+        <exclude-selector>string, comment</exclude-selector>
+        <symbols type="class">
+            <behavior>
+                <arguments prefix="" suffix=";" separator=", " />
+            </behavior>
+        </symbols>
+    </provider>
+
+</completions>
