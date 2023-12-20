@@ -6,6 +6,13 @@
   (#set! role function)
 )
 
+(anonymous_subroutine_expression
+  body: (block
+    "{" @start
+    "}" @end)
+  (#set! role function)
+)
+
 (eval_expression
   (block
     "{" @start

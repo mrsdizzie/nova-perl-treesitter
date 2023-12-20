@@ -1,3 +1,8 @@
+## 1.0.3
+
+Add folds for anonymous_subroutine_expression
+Add symbols to match Mojolicious route handlers
+
 ## 1.0.2
 
 Upstream bug fixes

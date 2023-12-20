@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <completions>
     <provider>
-    <syntax>perl+treesitter</syntax>
+        <syntax>perl+treesitter</syntax>
         <exclude-selector>string, comment</exclude-selector>
+        <expression>(?&lt;!\-&gt;|\:\:|\$)(\b[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)</expression>
         <symbols type="function">
             <behavior>
                 <arguments prefix="(" suffix=")" separator=", " />
@@ -10,13 +11,21 @@
         </symbols>
     </provider>
     <provider>
-    <syntax>perl+treesitter</syntax>
+        <syntax>perl+treesitter</syntax>
         <exclude-selector>string, comment</exclude-selector>
+        <expression>(?&lt;!\-&gt;|\:\:|\$)(\b[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)</expression>
         <symbols type="class">
             <behavior>
                 <arguments prefix="" suffix=";" separator=", " />
             </behavior>
         </symbols>
     </provider>
-
+    <provider>
+        <syntax>perl+treesitter</syntax>
+        <exclude-selector>comment</exclude-selector>
+        <expression>(?&lt;!\-&gt;|\:\:)(\$([a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)?)</expression>
+        <trigger>$</trigger>
+        <symbols type="variable" />
+        <identifiers />
+    </provider>
 </completions>
