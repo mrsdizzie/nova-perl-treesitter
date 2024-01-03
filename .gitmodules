@@ -1,3 +1,6 @@
 [submodule "src/tree-sitter-perl"]
 	path = src/tree-sitter-perl
 	url = https://github.com/tree-sitter-perl/tree-sitter-perl
+[submodule "src/tree-sitter-mojo-template"]
+	path = src/tree-sitter-mojo-template
+	url = https://github.com/mrsdizzie/tree-sitter-mojo-template

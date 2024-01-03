@@ -17,3 +17,15 @@ codesign -s - libtree-sitter-perl.dylib
 mv libtree-sitter-perl.dylib ../../perl-tree-sitter.novaextension/Syntaxes/
 
 cd "$OLDPWD"
+
+cp ./src/Makefile ./src/tree-sitter-mojo-template/
+cd ./src/tree-sitter-mojo-template
+
+npm i -D 2>/dev/null
+npm i -D tree-sitter-cli
+
+npx tree-sitter generate
+../compile_parser.sh "$PWD" "/Applications/Nova.app"
+
+codesign -s - libtree-sitter-mojo_template.dylib
+mv libtree-sitter-mojo_template.dylib ../../perl-tree-sitter.novaextension/Syntaxes/

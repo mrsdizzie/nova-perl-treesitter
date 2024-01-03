@@ -3,7 +3,8 @@ SRC_DIR := src
 
 PARSER_REPO_URL ?= $(shell git -C $(SRC_DIR) remote get-url origin )
 # the # in the sed pattern has to be escaped or it will be interpreted as a comment
-PARSER_NAME ?= $(shell basename $(PARSER_REPO_URL) | cut -d '-' -f3 | sed 's\#.git\#\#')
+PARSER_NAME ?= $(shell basename $(PARSER_REPO_URL) | sed 's/\.git$$//' | cut -d '-' -f 3- | tr '-' '_')
+
 UPPER_PARSER_NAME := $(shell echo $(PARSER_NAME) | tr a-z A-Z )
 
 # install directory layout

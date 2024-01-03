@@ -1,11 +1,17 @@
+## 1.0.4
+
+Add new syntax HTML (EP) for Mojo::Template files
+
 ## 1.0.3
 
 Add folds for anonymous_subroutine_expression
+
 Add symbols to match Mojolicious route handlers
 
 ## 1.0.2
 
 Upstream bug fixes
+
 Properly detect entire package file as a class symbol
 
 Add some basic completions
