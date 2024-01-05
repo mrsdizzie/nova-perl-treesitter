@@ -1,3 +1,7 @@
+## 1.0.5
+
+'Upstream' update for tree-sitter-mojo-template
+
 ## 1.0.4
 
 Add new syntax HTML (EP) for Mojo::Template files
