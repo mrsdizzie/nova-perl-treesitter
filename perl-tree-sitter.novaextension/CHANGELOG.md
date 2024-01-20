@@ -1,3 +1,9 @@
+## 1.0.6
+
+Upstream update for perl
+
+Includes newer perl features like try, catch, defer, class
+
 ## 1.0.5
 
 'Upstream' update for tree-sitter-mojo-template

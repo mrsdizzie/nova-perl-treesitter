@@ -44,3 +44,8 @@
     (varname) @name
     (#set! role variable)
 )) @subtree
+
+(class_statement
+ name: (package) @name
+ (#set! role class)
+) @subtree

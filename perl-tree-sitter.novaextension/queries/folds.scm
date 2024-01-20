@@ -53,3 +53,24 @@
     "}" @end)
   (#set! role block)
 )
+
+(try_statement
+  (block
+    "{" @start
+    "}" @end)
+  (#set! role block)
+)
+
+(defer_statement
+  (block
+    "{" @start
+    "}" @end)
+  (#set! role block)
+)
+
+(class_statement
+  (block
+    "{" @start
+    "}" @end)
+  (#set! role block)
+)

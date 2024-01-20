@@ -9,20 +9,22 @@
 
 [ "BEGIN" "INIT" "CHECK" "UNITCHECK" "END" ] @keyword.condition
 
+[ "try" "catch" "finally" "defer" ] @keyword
+
 [ "while" "until" "for" "foreach" ] @keyword.condition
 
 "return" @keyword
 
-"sub" @keyword.construct
+[ "sub" "method" ] @keyword.construct
 
 ; technically an operator but used more like a builtin function
 [ "qw" "eval" "map" "grep" "sort" ] @identifier.core
 
-"package" @definition.package
+[ "package" "class" ] @definition.package
 
 [
   "do"
-  "my" "our" "local" "state"
+  "my" "our" "local" "state" "field"
   "last" "next" "redo" "goto"
   "undef"
 ] @keyword
@@ -81,6 +83,7 @@
 
 (use_statement (package) @type)
 (package_statement (package) @type)
+(class_statement (package) @type)
 (require_expression (bareword) @type)
 ((package) (quoted_word_list) @string-template.value)
 
@@ -97,6 +100,7 @@
 
 (function_call_expression (function) @identifier.function)
 (method_call_expression (method) @identifier.method)
+(method_declaration_statement name: (bareword) @identifier.method)
 (method_call_expression invocant: (bareword) @keyword.construct)
 
 (func0op_call_expression function: _ @identifier.core)
