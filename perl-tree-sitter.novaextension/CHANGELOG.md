@@ -1,3 +1,7 @@
+## 1.0.7
+
+Updats for tree-sitter-mojo-template
+
 ## 1.0.6
 
 Upstream update for perl
