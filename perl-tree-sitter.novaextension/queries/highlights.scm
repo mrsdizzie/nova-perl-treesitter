@@ -12,6 +12,7 @@
 [ "try" "catch" "finally" "defer" ] @keyword
 
 [ "while" "until" "for" "foreach" ] @keyword.condition
+("continue" @keyword.condition (block))
 
 "return" @keyword
 

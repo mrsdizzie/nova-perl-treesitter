@@ -1,3 +1,7 @@
+## 1.0.8
+
+Upstream update for perl
+
 ## 1.0.7
 
 Updats for tree-sitter-mojo-template
@@ -36,7 +40,7 @@ Upstream bug fixes
 
 ## 1.0
 
-More upstream improvements. Upstream tree-sitter grammar has also  now been included as the official perl tree-sitter for Neovim which means more review and testing.
+More upstream improvements. Upstream tree-sitter grammar has also now been included as the official perl tree-sitter for Neovim which means more review and testing.
 
 ## 0.0.5
 
